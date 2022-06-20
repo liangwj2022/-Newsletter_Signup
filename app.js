@@ -32,10 +32,10 @@ app.post("/", function(req,res){
     ]
   }
   const jsonData = JSON.stringify(data);
-  const url = "https://us13.api.mailchimp.com/3.0/lists/6fd4c14104";//add to which list
+  const url = " ";//add to which list, which is list_id
   const options = {
     method:"POST",
-    auth: "weijie1:d7d027a1ddd5c4b748eda5b65a7ecc09-us13" //HTTP Basic Authentication
+    auth: " " //HTTP Basic Authentication: "any string: API key"
   }
   const request = https.request(url, options, function(response){
     if (response.statusCode == 200){
@@ -59,7 +59,3 @@ app.post("/failure", function(req,res){
 app.listen(port || 3000, function(){
   console.log("The server is running on port " + port);
 });
-
-
-// API Key: d7d027a1ddd5c4b748eda5b65a7ecc09-us13
-//list ID: 6fd4c14104
